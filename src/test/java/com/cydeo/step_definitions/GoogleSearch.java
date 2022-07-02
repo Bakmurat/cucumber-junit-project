@@ -25,7 +25,7 @@ public class GoogleSearch {
     @Then("User sees apple – Google Search is in the google title")
     public void user_sees_apple_google_search_is_in_the_google_title() {
 
-        Assert.assertEquals("Title verification is failed!","apple – Google Search",Driver.getDriver().getTitle());
+        Assert.assertEquals("Title verification is failed!","apple - Google Search",Driver.getDriver().getTitle());
 
     }
 }
