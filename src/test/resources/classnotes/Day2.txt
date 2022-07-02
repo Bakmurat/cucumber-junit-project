@@ -61,7 +61,10 @@ First project:  Maven(build) + Selenium(Automation tool-driver) + TestNG(testing
 
 
 TestNG Assertions: Assert.assertTrue(boolean, "failure message");
+TestNG Assertions: Assert.assertEquals(actual,expected,"failure message)
+
 JUNIT Assertions: Assert.assertTrue("failure message", boolean);
+JUNIT Assertions: Assert.assertEquals("failure message", expected,actual);
 
 --------------------------------------------------------------------------------
 
