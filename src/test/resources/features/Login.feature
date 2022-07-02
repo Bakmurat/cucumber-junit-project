@@ -5,8 +5,10 @@ Feature: Library app login feature
 
   Accounts are: librarian, student, admin
 
+  #Similar to TestNG @BeforeMethod. Background is running before each scenario
   Background: For each scenario user is on library login page
     Given user is on the library login page
+
 
   @librarian  @employee  @smoke
   Scenario: Login as librarian
@@ -14,6 +16,7 @@ Feature: Library app login feature
     When user enters librarian username
     And user enters librarian password
     Then user should see dashboard
+
 
     @student  @smoke
     Scenario: Login as student
