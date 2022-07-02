@@ -33,7 +33,7 @@ public class GoogleSearch {
     @When("User types {string} in the google search box and clicks enter")
     public void userTypesInTheGoogleSearchBoxAndClicksEnter(String searchKeyword) {
 
-
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
 
     }
 
@@ -42,7 +42,8 @@ public class GoogleSearch {
     @Then("User sees {string} is in the google title")
     public void userSeesIsInTheGoogleTitle(String expectedTitle) {
 
-
+        Assert.assertEquals("Title verification is failed!",expectedTitle,Driver.getDriver().getTitle());
+      //TODO: you need to fix this later
 
     }
 }

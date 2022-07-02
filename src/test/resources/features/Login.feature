@@ -18,7 +18,7 @@ Feature: Library app login feature
     Then user should see dashboard
 
 
-    @student  @smoke
+    @student
     Scenario: Login as student
      #Given user is on the library login page
       When user enters student username

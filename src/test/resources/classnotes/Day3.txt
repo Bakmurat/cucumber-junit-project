@@ -6,9 +6,10 @@ Today's schedule: #1- dryRun - review
                   #4- Hooks
                   #5- Html Reports
                   #6- Parameterization
-                  #7- dataTables
 
- Upcoming topics: #8- scenario outlines
+
+ Upcoming topics: #7- dataTables
+                  #8- scenario outlines
                   #9- parallel testing
                   #10- report generation
 
