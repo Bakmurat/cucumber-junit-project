@@ -28,4 +28,21 @@ public class GoogleSearch {
         Assert.assertEquals("Title verification is failed!","apple - Google Search",Driver.getDriver().getTitle());
 
     }
+
+
+    @When("User types {string} in the google search box and clicks enter")
+    public void userTypesInTheGoogleSearchBoxAndClicksEnter(String searchKeyword) {
+
+
+
+    }
+
+
+
+    @Then("User sees {string} is in the google title")
+    public void userSeesIsInTheGoogleTitle(String expectedTitle) {
+
+
+
+    }
 }

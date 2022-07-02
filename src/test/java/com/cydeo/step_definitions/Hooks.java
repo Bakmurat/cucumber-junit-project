@@ -22,9 +22,12 @@ public class Hooks {
     public void teardownScenario(Scenario scenario){
         System.out.println("--> It is coming from @After in Hooks ");
 
-       byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-       scenario.attach(screenshot,"image/png",scenario.getName());
+       if(scenario.isFailed()) {
 
+           byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+           scenario.attach(screenshot, "image/png", scenario.getName());
+
+       }
 
         Driver.closeDriver();
     }
