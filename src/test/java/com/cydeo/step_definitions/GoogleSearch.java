@@ -16,7 +16,7 @@ public class GoogleSearch {
 
     @When("User searches for {string} capital")
     public void user_searches_for_capital(String countryName) {
-        googleSearchPage.searchBox.sendKeys(countryName + Keys.ENTER);
+        googleSearchPage.searchBox.sendKeys("what is capital of "+countryName + Keys.ENTER);
 
     }
 
