@@ -334,3 +334,15 @@ PARAMETERIZATION: CUCUMBER EXPRESSIONS
     - and we provide rest of the data under headers.
 
     - we can pass more than one examples table under one scenario outline
+
+
+
+Q: What is the difference between data table and scenario outline?
+
+    - Data tables allow us to pass collection type into a step in a feature file.
+    - Scenario outline is completely different. It is similar approach to Parameterization.
+     But instead of passing the test data inside of the step, we provide a test data as a table under our Scenario outline.
+    - We cannot create SCENARIO OUTLINE/TEMPLATE without providing an "Examples" table.
+    - But, we can use "data tables" without having to use "examples"
+
+    - Scenario Outline and Scenario Template are the same thing. Just alternative keyword.

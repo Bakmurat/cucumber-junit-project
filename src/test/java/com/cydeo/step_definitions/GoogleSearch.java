@@ -22,6 +22,7 @@ public class GoogleSearch {
         for (String each : searchKeywords) {
             googleSearchPage.searchBox.clear();
             googleSearchPage.searchBox.sendKeys(each+Keys.ENTER);
+            Assert.assertEquals(each+" - Google Search",Driver.getDriver().getTitle());
         }
 
     }
