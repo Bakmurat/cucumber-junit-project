@@ -17,12 +17,12 @@ public class GoogleSearch {
     @When("User searches for {string} capital")
     public void user_searches_for_capital(String countryName) {
         googleSearchPage.searchBox.sendKeys("what is capital of "+countryName + Keys.ENTER);
-
     }
 
     @Then("User should see {string} in the result")
-    public void user_should_see_in_the_result(String string) {
+    public void user_should_see_in_the_result(String capitalCity) {
 
+      Assert.assertEquals(capitalCity,googleSearchPage.capitalText.getText());
 
     }
 

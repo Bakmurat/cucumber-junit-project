@@ -15,4 +15,7 @@ public class GoogleSearchPage {
     @FindBy (name="q")
     public WebElement searchBox;
 
+    @FindBy(css = "a[class='FLP8od']")
+    public WebElement capitalText;
+
 }
