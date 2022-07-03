@@ -1,5 +1,7 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,7 +10,7 @@ public class WebTableLoginStepDef {
 
     @Given("user is in web table login page")
     public void user_is_in_web_table_login_page() {
-
+        Driver.getDriver().get(ConfigurationReader.getProperty("web.app.url"));
     }
 
     @When("user enters username {string}")

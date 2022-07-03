@@ -1,6 +1,7 @@
 
   Feature: User should be able to login with correct credentials
 
+
     @wip @webAppLogin
     Scenario: Web table login scenario
       Given user is in web table login page
