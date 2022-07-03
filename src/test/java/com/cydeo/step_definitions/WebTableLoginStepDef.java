@@ -3,10 +3,13 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.WebTableLoginPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+
+import java.util.Map;
 
 public class WebTableLoginStepDef {
 
@@ -14,15 +17,9 @@ public class WebTableLoginStepDef {
 
 
     @When("user enters below credentials")
-    public void user_enters_below_credentials(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        throw new io.cucumber.java.PendingException();
+    public void user_enters_below_credentials(Map<String,String> credentials) {
+
+        webTableLoginPage.login(credentials.get("username"),credentials.get("password"));
     }
 
 
@@ -47,11 +44,17 @@ public class WebTableLoginStepDef {
      webTableLoginPage.inputPassword.sendKeys(password);
     }
 
+    @And("user click login button")
+    public void userClickLoginButton() {
+        webTableLoginPage.loginBtn.click();
+    }
+
     @Then("user should see url contains orders")
     public void user_should_see_url_contains_orders() {
-       webTableLoginPage.loginBtn.click();
+
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
+
 
 
 }
