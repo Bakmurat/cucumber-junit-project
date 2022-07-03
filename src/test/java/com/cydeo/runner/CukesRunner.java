@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@wip"  // it will run all @smoke tags scenarios
+        tags = ""  // it will run all @smoke tags scenarios
 )
 public class CukesRunner {
 }

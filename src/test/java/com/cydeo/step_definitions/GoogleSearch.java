@@ -35,6 +35,7 @@ public class GoogleSearch {
 
         googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
 
+
     }
 
 
@@ -45,5 +46,10 @@ public class GoogleSearch {
         Assert.assertEquals("Title verification is failed!",expectedTitle,Driver.getDriver().getTitle());
       //TODO: you need to fix this later
 
+    }
+
+
+    @Then("User should be able to search for following:")
+    public void userShouldBeAbleToSearchForFollowing() {
     }
 }
