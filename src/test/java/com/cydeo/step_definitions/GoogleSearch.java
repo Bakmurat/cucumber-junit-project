@@ -14,6 +14,25 @@ public class GoogleSearch {
 
     GoogleSearchPage googleSearchPage =new GoogleSearchPage();
 
+    @When("User searches for {string} capital")
+    public void user_searches_for_capital(String countryName) {
+        googleSearchPage.searchBox.sendKeys(countryName + Keys.ENTER);
+
+    }
+
+    @Then("User should see {string} in the result")
+    public void user_should_see_in_the_result(String string) {
+
+
+    }
+
+
+
+
+
+
+
+
 
     @Then("User should be able to search for following:")
     public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
