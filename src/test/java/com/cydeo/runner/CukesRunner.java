@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions",
-        dryRun = false,
-        tags = ""  // it will run all @smoke tags scenarios
+        dryRun = true,
+        tags = "@dataTable"  // it will run all @smoke tags scenarios
 )
 public class CukesRunner {
 }

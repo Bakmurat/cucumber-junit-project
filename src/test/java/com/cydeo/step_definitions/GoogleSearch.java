@@ -8,6 +8,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
+import java.util.List;
+
 public class GoogleSearch {
 
     GoogleSearchPage googleSearchPage =new GoogleSearchPage();
@@ -50,6 +52,10 @@ public class GoogleSearch {
 
 
     @Then("User should be able to search for following:")
-    public void userShouldBeAbleToSearchForFollowing() {
+    public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
+
+
+
+
     }
 }
