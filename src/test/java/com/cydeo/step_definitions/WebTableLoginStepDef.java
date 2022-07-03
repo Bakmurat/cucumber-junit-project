@@ -12,6 +12,14 @@ public class WebTableLoginStepDef {
 
     WebTableLoginPage webTableLoginPage =new WebTableLoginPage();
 
+    @When("user enters username {string} , password {string} and login")
+    public void user_enters_username_password_and_login(String username, String password) {
+        webTableLoginPage.login(username,password);
+    }
+
+
+
+
     @Given("user is in web table login page")
     public void user_is_in_web_table_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("web.app.url"));
@@ -31,5 +39,6 @@ public class WebTableLoginStepDef {
        webTableLoginPage.loginBtn.click();
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
+
 
 }
