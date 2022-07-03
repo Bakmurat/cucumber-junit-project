@@ -1,16 +1,21 @@
+Feature: User should be able to login with correct credentials
 
-  Feature: User should be able to login with correct credentials
+  Background:
+    Given user is in web table login page
 
-    Background:
-      Given user is in web table login page
+  @webAppLogin
+  Scenario: Web table login scenario
+    When user enters username "Test"
+    And user enters password "Tester"
+    Then user should see url contains orders
 
-     @webAppLogin
-    Scenario: Web table login scenario
-      When user enters username "Test"
-      And user enters password "Tester"
-      Then user should see url contains orders
 
-    @wip
-    Scenario: positive login scenario
-      When user enters username "Test" , password "Tester" and login
-      Then user should see url contains orders
+  Scenario: positive login scenario
+    When user enters username "Test" , password "Tester" and login
+    Then user should see url contains orders
+
+  @wip
+  Scenario: map data table practice
+    When user enters below credentials
+      | username | Test   |
+      | password | Tester |
