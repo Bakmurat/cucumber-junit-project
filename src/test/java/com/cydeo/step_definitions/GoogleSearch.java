@@ -14,6 +14,23 @@ public class GoogleSearch {
 
     GoogleSearchPage googleSearchPage =new GoogleSearchPage();
 
+
+    @Then("User should be able to search for following:")
+    public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
+        System.out.println("searchKeywords: " + searchKeywords);
+
+        for (String each : searchKeywords) {
+            googleSearchPage.searchBox.clear();
+            googleSearchPage.searchBox.sendKeys(each+Keys.ENTER);
+        }
+
+    }
+
+
+
+
+
+
     @Given("User is on Google search page")
     public void user_is_on_google_search_page() {
         Driver.getDriver().get("https://www.google.com/");
@@ -51,11 +68,5 @@ public class GoogleSearch {
     }
 
 
-    @Then("User should be able to search for following:")
-    public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
 
-
-
-
-    }
 }
