@@ -6,11 +6,11 @@ Feature: Data Driven testing using Scenario Outline
     When User searches for "<country>" capital
     Then User should see "<capital>" in the result
     Examples:
-      | country     | capital       |
-      | AZERBAIJAN  | Baku          |
-      | Tajikistan  | Dushanbe      |
-      | Bulgaria    | Sofia         |
-      | Ukraine     | Kyiv          |
-      | Afghanistan | Kabul         |
-      | USA         | Washington DC |
-      | TURKEY      | Ankara        |
+      | country     | capital          |
+      | AZERBAIJAN  | Baku             |
+      | Tajikistan  | Dushanbe         |
+      | Bulgaria    | Sofia            |
+      | Ukraine     | Kyiv             |
+      | Afghanistan | Kabul            |
+      | USA         | Washington, D.C  |
+      | TURKEY      | Ankara           |

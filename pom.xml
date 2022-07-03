@@ -39,14 +39,15 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.3.2</version>
+            <version>5.6.0</version>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>7.3.2</version>
+            <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
 
