@@ -10,8 +10,10 @@ Today's schedule: #1- dryRun - review
 
  Upcoming topics: #7- dataTables
                   #8- scenario outlines
-                  #9- parallel testing
-                  #10- report generation
+                  #9- cucumber rerun
+                  #10-report generation
+                  #11- parallel testing
+
 
 
   - We will be focusing more on "Tell me about your framework?" question.
