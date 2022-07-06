@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class WebTableOrderPage extends BasePage{
 
     public WebTableOrderPage(){
@@ -32,8 +34,8 @@ public class WebTableOrderPage extends BasePage{
     @FindBy(name="zip")
     public WebElement zipCode;
 
-    @FindBy(name="product")
-    public WebElement creditCardType;
+    @FindBy(name="card")
+    public List<WebElement> creditCardType;
 
     @FindBy(name="cardNo")
     public WebElement creditCardNumber;
