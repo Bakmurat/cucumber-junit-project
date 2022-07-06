@@ -25,14 +25,17 @@ public class WebTableOrderStepDef {
 
     }
     @When("user selects product type {string}")
-    public void user_selects_product_type(String string) {
+    public void user_selects_product_type(String productType) {
      Select select = new Select(webTableOrderPage.product);
-
-
+     select.selectByVisibleText(productType);
 
     }
     @When("user enters quantity {int}")
-    public void user_enters_quantity(Integer int1) {
+    public void user_enters_quantity(int quantity) {
+    // webTableOrderPage.quantity.sendKeys(String.valueOf(quantity));
+      webTableOrderPage.quantity.clear();
+     webTableOrderPage.quantity.sendKeys(quantity+"");
+
 
     }
     @When("user enters customer name {string}")
