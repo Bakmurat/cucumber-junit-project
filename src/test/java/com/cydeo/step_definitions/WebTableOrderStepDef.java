@@ -8,7 +8,10 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class WebTableOrderStepDef {
 
@@ -39,31 +42,44 @@ public class WebTableOrderStepDef {
 
     }
     @When("user enters customer name {string}")
-    public void user_enters_customer_name(String string) {
-
+    public void user_enters_customer_name(String customerName) {
+     webTableOrderPage.customerName.sendKeys(customerName);
     }
     @When("user enters street {string}")
-    public void user_enters_street(String string) {
-
+    public void user_enters_street(String street) {
+     webTableOrderPage.street.sendKeys(street);
     }
     @When("user enters city {string}")
     public void user_enters_city(String string) {
-
+      webTableOrderPage.city.sendKeys(string);
     }
     @When("user enters state {string}")
     public void user_enters_state(String string) {
-
+     webTableOrderPage.state.sendKeys(string);
     }
     @When("user enters zipcode {string}")
     public void user_enters_zipcode(String string) {
-
+      webTableOrderPage.zipCode.sendKeys(string);
     }
     @When("user selects credit card type {string}")
-    public void user_selects_credit_card_type(String string) {
+    public void user_selects_credit_card_type(String expectedCardType) {
+
+        List<WebElement> cardTypes = webTableOrderPage.creditCardType;
+
+        for (WebElement each : cardTypes) {
+            if(each.getAttribute("value").equalsIgnoreCase(expectedCardType)){
+              each.click();
+            }
+
+        }
+
+
+
 
     }
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {
+
 
     }
     @When("user enters expiry date {string}")
