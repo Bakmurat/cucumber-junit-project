@@ -1,5 +1,6 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.AllOrdersPage;
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.WebTableLoginPage;
 import com.cydeo.pages.WebTableOrderPage;
@@ -19,6 +20,8 @@ public class WebTableOrderStepDef {
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
     BasePage basePage = new BasePage();
     WebTableOrderPage webTableOrderPage = new WebTableOrderPage();
+
+    AllOrdersPage allOrdersPage =new AllOrdersPage();
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
@@ -91,8 +94,9 @@ public class WebTableOrderStepDef {
         webTableOrderPage.processOrderBtn.click();
     }
     @Then("user should see {string} in first row of the web table")
-    public void user_should_see_in_first_row_of_the_web_table(String string) {
+    public void user_should_see_in_first_row_of_the_web_table(String expectedName) {
 
-        Assert.assertEquals();
+        String actualName = allOrdersPage.firstRowname.getText();
+        Assert.assertEquals(expectedName,actualName);
     }
 }
