@@ -5,15 +5,15 @@ Feature: Google Search Functionality Title Verification
   Background:
     Given User is on Google search page
 
-  @smoke @googleSearch
+  @smoke
   Scenario: Search functionality result title verification
   When User types apple in the google search box and clicks enter
   Then User sees apple – Google Search is in the google title
 
-
+  @googleSearch
   Scenario: Search functionality result title verification
     When User types "apple" in the google search box and clicks enter
-    Then User sees "apple - Google Search" is in the google title
+    Then User sees "apple - Google Searc" is in the google title
 
 
 
