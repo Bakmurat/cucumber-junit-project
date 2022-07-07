@@ -12,5 +12,5 @@ Feature: Data Driven testing using Scenario Outline
       | Bulgaria    | Sofia            |
       | Ukraine     | Kyiv             |
       | Afghanistan | Kabul            |
-      | USA         | Washington, D.C  |
+      | USA         | Washington, D.C. |
       | TURKEY      | Ankara           |
