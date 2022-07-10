@@ -10,8 +10,11 @@ public class US20HomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id="prependedInput")
-    public WebElement inputUserName;
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[1]")
+    public WebElement fleetModule;
 
+    @FindBy(xpath = "(//span[@class='title title-level-2'])[1]")
+    public WebElement vehicleModule;
 
+    
 }
