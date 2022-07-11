@@ -19,4 +19,9 @@ public class US20VehiclesPage {
     @FindBy(css = ".refresh-action")
     public WebElement refreshBtn;
 
+    @FindBy(css = ".reset-action")
+    public WebElement resetBtn;
+    
+    
+
 }

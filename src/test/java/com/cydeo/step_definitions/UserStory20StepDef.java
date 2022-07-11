@@ -75,10 +75,15 @@ public class UserStory20StepDef {
     @Then("I should be able to click refresh button")
     public void iShouldBeAbleToClickRefreshButton() throws InterruptedException{
         Thread.sleep(3000);
+        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.refreshBtn.isEnabled());
         us20VehiclesPage.refreshBtn.click();
-       Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.refreshBtn.isDisplayed());
+    }
 
-
+    @Then("I should be able to click reset button")
+    public void iShouldBeAbleToClickResetButton() throws InterruptedException{
+        Thread.sleep(3000);
+        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.resetBtn.isEnabled());
+        us20VehiclesPage.resetBtn.click();
     }
 }
 

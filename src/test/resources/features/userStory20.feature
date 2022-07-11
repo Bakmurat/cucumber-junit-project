@@ -29,13 +29,21 @@ Feature: Vytrack locate and click web elements verification.
 		And I click on Vehicles.
 		Then I should see Export Grid dropdown on left side.
 
-		#User can click refresh button
+	#User can click refresh button
 	@AC3 @B26G18-163 @B26G18-137 @VyTrack
 	Scenario: #20 TC003 User should be able to click refresh button
 		Given I'm a user on Home page.
 		When I go to Fleet Module.
 		And I click on Vehicles.
 		Then I should be able to click refresh button
+
+	#User can click reset button.
+	@AC4 @B26G18-165 @B26G18-137 @VyTrack
+	Scenario: #20 TC004 User should be able click reset button
+		Given I'm a user on Home page.
+		When I go to Fleet Module.
+		And I click on Vehicles.
+		Then I should be able to click reset button
 
 
 
