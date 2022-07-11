@@ -89,8 +89,8 @@ public class UserStory20StepDef {
     @Then("I should be able to click Grid Settings button")
     public void iShouldBeAbleToClickGridSettingsButton() throws InterruptedException{
         Thread.sleep(3000);
-        Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage..isEnabled());
-        us20VehiclesPage.resetBtn.click();
+        Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage.settingBtn.isEnabled());
+        us20VehiclesPage.settingBtn.click();
     }
 }
 
