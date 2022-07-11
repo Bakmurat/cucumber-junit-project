@@ -21,6 +21,9 @@ public class US20VehiclesPage {
 
     @FindBy(css = ".reset-action")
     public WebElement resetBtn;
+
+    @FindBy(css = "a[title~='Grid']")
+    public WebElement settingBtn;
     
     
 

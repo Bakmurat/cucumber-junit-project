@@ -45,6 +45,13 @@ Feature: Vytrack locate and click web elements verification.
 		And I click on Vehicles.
 		Then I should be able to click reset button
 
+		#User can click Grid Settings button
+	@AC5 @B26G18-166 @B26G18-137 @VyTrack
+	Scenario: #20 TC005 User should be able to click Grid Settings button
+		Given I'm a user on Home page.
+		When I go to Fleet Module.
+		And I click on Vehicles.
+		Then I should be able to click Grid Settings button
 
 
 
