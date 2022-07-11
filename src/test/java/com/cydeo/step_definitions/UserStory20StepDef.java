@@ -103,6 +103,15 @@ public class UserStory20StepDef {
 
 
     }
+
+    @Then("I should be able to see Grid Settings on the right side of the Reset button")
+    public void iShouldBeAbleToSeeGridSettingsOnTheRightSideOfTheResetButton() throws InterruptedException {
+        Thread.sleep(3000);
+        int locReset = us20VehiclesPage.resetBtn.getLocation().getX();
+        int locSetting = us20VehiclesPage.settingBtn.getLocation().getX();
+
+        Assert.assertTrue("Refresh button being located on the left of the Reset button verification failed", locReset < locSetting);
+    }
 }
 
 
