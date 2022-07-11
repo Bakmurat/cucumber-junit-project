@@ -85,6 +85,13 @@ public class UserStory20StepDef {
         Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.resetBtn.isEnabled());
         us20VehiclesPage.resetBtn.click();
     }
+
+    @Then("I should be able to click Grid Settings button")
+    public void iShouldBeAbleToClickGridSettingsButton() throws InterruptedException{
+        Thread.sleep(3000);
+        Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage.settingBtn.isEnabled());
+        us20VehiclesPage.settingBtn.click();
+    }
 }
 
 
