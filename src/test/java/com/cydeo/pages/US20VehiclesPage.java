@@ -15,4 +15,8 @@ public class US20VehiclesPage {
 
     @FindBy(css = "a[title='CSV']")
     public WebElement csvButton;
+
+    @FindBy(css = ".refresh-action")
+    public WebElement refreshBtn;
+
 }

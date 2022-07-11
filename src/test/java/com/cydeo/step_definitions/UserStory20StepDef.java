@@ -71,4 +71,27 @@ public class UserStory20StepDef {
         int xPos = us20VehiclesPage.exportGrid.getLocation().getX();
         Assert.assertTrue("Logo position failed",xPos <= winWidth/2);
     }
+
+    @Then("I should be able to click refresh button")
+    public void iShouldBeAbleToClickRefreshButton() throws InterruptedException{
+        Thread.sleep(3000);
+        us20VehiclesPage.refreshBtn.click();
+       Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.refreshBtn.isDisplayed());
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
