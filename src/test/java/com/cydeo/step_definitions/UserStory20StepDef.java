@@ -112,6 +112,15 @@ public class UserStory20StepDef {
 
         Assert.assertTrue("Refresh button being located on the left of the Reset button verification failed", locReset < locSetting);
     }
+
+    @Then("I should be able to see Grid Setting button on the right of the page")
+    public void iShouldBeAbleToSeeGridSettingButtonOnTheRightOfThePage() throws InterruptedException{
+        Thread.sleep(3000);
+        int winWidth = Driver.getDriver().manage().window().getSize().getWidth();
+
+        int xPos = us20VehiclesPage.settingBtn.getLocation().getX();
+        Assert.assertTrue("Logo position failed",xPos > winWidth/2);
+    }
 }
 
 

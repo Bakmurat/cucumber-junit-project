@@ -68,6 +68,13 @@ Feature: Vytrack locate and click web elements verification.
 		And I click on Vehicles.
 		Then I should be able to see Grid Settings on the right side of the Reset button
 
+		#User can see Grid Setting button on the right of the page
+	@AC8 @B26G18-171 @B26G18-137 @VyTrack
+	Scenario: #20 TC008 Grid Setting button is on the right of the page
+		Given I'm a user on Home page.
+		When I go to Fleet Module.
+		And I click on Vehicles.
+		Then I should be able to see Grid Setting button on the right of the page
 
 
 
