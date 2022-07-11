@@ -16,6 +16,7 @@ public class UserStory20StepDef {
     US20HomePage us20HomePage = new US20HomePage();
     US20VehiclesPage us20VehiclesPage = new US20VehiclesPage();
 
+
     @Given("user is in Vytrack login page")
     public void user_is_in_vytrack_login_page() throws InterruptedException {
         Thread.sleep(2000);
@@ -60,5 +61,14 @@ public class UserStory20StepDef {
         Thread.sleep(3000);
         Assert.assertTrue("Export Grid Test failed.",us20VehiclesPage.csvButton.isDisplayed());
 
+    }
+
+    @Then("I should see Export Grid dropdown on left side.")
+    public void iShouldSeeExportGridDropdownOnLeftSide() {
+
+        int winWidth = Driver.getDriver().manage().window().getSize().getWidth();
+
+        int xPos = us20VehiclesPage.exportGrid.getLocation().getX();
+        Assert.assertTrue("Logo position failed",xPos <= winWidth/2);
     }
 }
