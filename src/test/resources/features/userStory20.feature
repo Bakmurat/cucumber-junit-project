@@ -53,6 +53,14 @@ Feature: Vytrack locate and click web elements verification.
 		And I click on Vehicles.
 		Then I should be able to click Grid Settings button
 
+		#User can see Refresh button on the left side of the Reset button
+	@AC6 @B26G18-167 @B26G18-137 @VyTrack
+	Scenario: #20 TC006 Refresh button should be on the left side of Reset button
+		Given I'm a user on Home page.
+		When I go to Fleet Module.
+		And I click on Vehicles.
+		Then I should be able to see Refresh button on the left side of the Reset button
+
 
 
 

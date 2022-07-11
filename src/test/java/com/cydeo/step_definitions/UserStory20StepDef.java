@@ -92,6 +92,17 @@ public class UserStory20StepDef {
         Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage.settingBtn.isEnabled());
         us20VehiclesPage.settingBtn.click();
     }
+
+    @Then("I should be able to see Refresh button on the left side of the Reset button")
+    public void iShouldBeAbleToSeeRefreshButtonOnTheLeftSideOfTheResetButton()throws InterruptedException {
+        Thread.sleep(3000);
+        int locReset = us20VehiclesPage.resetBtn.getLocation().getX();
+        int locRefresh = us20VehiclesPage.refreshBtn.getLocation().getX();
+
+        Assert.assertTrue("Refresh button being located on the left of the Reset button verification failed", locRefresh < locReset);
+
+
+    }
 }
 
 
