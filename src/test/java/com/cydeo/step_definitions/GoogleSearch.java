@@ -26,14 +26,6 @@ public class GoogleSearch {
 
     }
 
-
-
-
-
-
-
-
-
     @Then("User should be able to search for following:")
     public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
         System.out.println("searchKeywords: " + searchKeywords);
@@ -45,11 +37,6 @@ public class GoogleSearch {
         }
 
     }
-
-
-
-
-
 
     @Given("User is on Google search page")
     public void user_is_on_google_search_page() {
@@ -68,16 +55,11 @@ public class GoogleSearch {
 
     }
 
-
     @When("User types {string} in the google search box and clicks enter")
     public void userTypesInTheGoogleSearchBoxAndClicksEnter(String searchKeyword) {
 
         googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
-
-
     }
-
-
 
     @Then("User sees {string} is in the google title")
     public void userSeesIsInTheGoogleTitle(String expectedTitle) {
@@ -88,5 +70,19 @@ public class GoogleSearch {
     }
 
 
-
+//    @When("User types \\(apple|juice|dog)in the google search box and clicks enter")
+//    public void userTypesAppleJuiceDogInTheGoogleSearchBoxAndClicksEnter(String in) {
+//        switch (in){
+//            case "apple":
+//                googleSearchPage.searchBox.sendKeys(in + Keys.ENTER);
+//                break;
+//            case "juice":
+//                googleSearchPage.searchBox.sendKeys(in + Keys.ENTER);
+//                break;
+//            case "dog":
+//                googleSearchPage.searchBox.sendKeys(in + Keys.ENTER);
+//                break;
+//        }
+//
+//    }
 }

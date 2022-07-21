@@ -1,4 +1,4 @@
-@Regression
+
 Feature: Library app login feature
   User Story: As a user, I should be able to login with correct credentials to different accounts.
   and dashboard should be displayed.
@@ -10,7 +10,7 @@ Feature: Library app login feature
     Given user is on the library login page
 
 
-  @librarian  @employee  @smoke
+  @librarian  @employee
   Scenario: Login as librarian
     #Given user is on the library login page
     When user enters librarian username

@@ -11,9 +11,8 @@ Feature: Vytrack locate and click web elements verification.
 		#When user logs in
 		#Then user should see title "Dashboard"
 
-
 	#User should be able to click Export Grid dropdown
-	@AC1 @B26G18-138 @B26G18-137 @VyTrack
+	@AC1 @B26G18-138 @B26G18-137 @VyTrack @Smoke
 	Scenario: #20 TC001 User should be able to click Export Grid dropdown
 		Given I'm a user on Home page.
 		When I go to Fleet Module.
@@ -30,7 +29,7 @@ Feature: Vytrack locate and click web elements verification.
 		Then I should see Export Grid dropdown on left side.
 
 	#User can click refresh button
-	@AC3 @B26G18-163 @B26G18-137 @VyTrack
+	@AC3 @B26G18-163 @B26G18-137 @VyTrack @Smoke
 	Scenario: #20 TC003 User should be able to click refresh button
 		Given I'm a user on Home page.
 		When I go to Fleet Module.
@@ -46,7 +45,7 @@ Feature: Vytrack locate and click web elements verification.
 		Then I should be able to click reset button
 
   #User can click Grid Settings button
-	@AC5 @B26G18-166 @B26G18-137 @VyTrack
+	@AC5 @B26G18-166 @B26G18-137 @VyTrack @Smoke
 	Scenario: #20 TC005 User should be able to click Grid Settings button
 		Given I'm a user on Home page.
 		When I go to Fleet Module.
@@ -60,8 +59,9 @@ Feature: Vytrack locate and click web elements verification.
 		When I go to Fleet Module.
 		And I click on Vehicles.
 		Then I should be able to see Refresh button on the left side of the Reset button
-    #User can see Grid Settings on the right side of the Reset button
-	@AC7 @B26G18-170 @B26G18-137 @VyTrack
+
+	#User can see Grid Settings on the right side of the Reset button
+	@AC7 @B26G18-170 @B26G18-137 @VyTrack @Smoke
 	Scenario: #20 TC007 Grid Settings should be on the right side of the Reset button
 		Given I'm a user on Home page.
 		When I go to Fleet Module.

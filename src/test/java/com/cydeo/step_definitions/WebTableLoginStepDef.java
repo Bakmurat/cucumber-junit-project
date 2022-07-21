@@ -18,11 +18,8 @@ public class WebTableLoginStepDef {
 
     @When("user enters below credentials")
     public void user_enters_below_credentials(Map<String,String> credentials) {
-
         webTableLoginPage.login(credentials.get("username"),credentials.get("password"));
     }
-
-
 
     @When("user enters username {string} , password {string} and login")
     public void user_enters_username_password_and_login(String username, String password) {
@@ -55,6 +52,16 @@ public class WebTableLoginStepDef {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
 
-
+    @When("I create new contact")
+    public void i_create_new_contact(Map<String,String> in) {
+        System.out.println("***first_name:"+in.get("first_name"));
+        System.out.println("***last_name:"+in.get("last_name"));
+        System.out.println("***cell_phone:"+in.get("cell_phone"));
+        System.out.println("***off_phone:"+in.get("off_phone"));
+    }
+    @Then("I should see contact info for {string}")
+    public void i_should_see_contact_info_for(String string) {
+        System.out.println("***Output: "+string);
+    }
 
 }

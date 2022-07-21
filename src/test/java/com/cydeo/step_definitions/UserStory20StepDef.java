@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserStory20StepDef {
 
@@ -16,6 +17,7 @@ public class UserStory20StepDef {
     US20HomePage us20HomePage = new US20HomePage();
     US20VehiclesPage us20VehiclesPage = new US20VehiclesPage();
 
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 500);
 
     @Given("user is in Vytrack login page")
     public void user_is_in_vytrack_login_page() throws InterruptedException {
@@ -75,22 +77,23 @@ public class UserStory20StepDef {
     @Then("I should be able to click refresh button")
     public void iShouldBeAbleToClickRefreshButton() throws InterruptedException{
         Thread.sleep(3000);
-        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.refreshBtn.isEnabled());
         us20VehiclesPage.refreshBtn.click();
+        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.refreshBtn.isEnabled());
     }
 
     @Then("I should be able to click reset button")
     public void iShouldBeAbleToClickResetButton() throws InterruptedException{
         Thread.sleep(3000);
-        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.resetBtn.isEnabled());
         us20VehiclesPage.resetBtn.click();
+        Assert.assertTrue("Refresh button verification failed", us20VehiclesPage.resetBtn.isEnabled());
     }
 
     @Then("I should be able to click Grid Settings button")
     public void iShouldBeAbleToClickGridSettingsButton() throws InterruptedException{
         Thread.sleep(3000);
-        Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage.settingBtn.isEnabled());
         us20VehiclesPage.settingBtn.click();
+        Assert.assertTrue("Grid settings button verification failed", us20VehiclesPage.settingBtn.isEnabled());
+
     }
 
     @Then("I should be able to see Refresh button on the left side of the Reset button")
@@ -100,8 +103,6 @@ public class UserStory20StepDef {
         int locRefresh = us20VehiclesPage.refreshBtn.getLocation().getX();
 
         Assert.assertTrue("Refresh button being located on the left of the Reset button verification failed", locRefresh < locReset);
-
-
     }
 
     @Then("I should be able to see Grid Settings on the right side of the Reset button")
